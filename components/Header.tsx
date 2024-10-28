@@ -5,9 +5,9 @@ import {SignedIn, SignedOut, SignInButton, UserButton, useUser} from "@clerk/nex
 function Header() {
     const { user } = useUser();
     return (
-        <div>
+        <div className={"flex items-center justify-between p-5"}>
             {user && (
-                <h1>{user?.firstName}{`'s`} Space</h1>
+                <h1 className={"text-2xl"}>{user?.firstName} {user?.lastName}{`'s`} Space</h1>
             )}
             {/*breadcrumbs*/}
             <div>
